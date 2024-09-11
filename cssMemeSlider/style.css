@@ -74,7 +74,7 @@ body {
 }
 
 #radio2 + .wrapper-radio-caption > .caption {
-    transform:  translateY(1.3em);
+    transform:  translateY(1.74em);
 }
 
 #radio3 + .wrapper-radio-caption > .radio {
@@ -82,7 +82,7 @@ body {
 }
 
 #radio3 + .wrapper-radio-caption > .caption {
-    transform: translateY(2.6em);
+    transform: translateY(3.47em);
 }
 
 #radio4 + .wrapper-radio-caption > .radio {
@@ -90,7 +90,7 @@ body {
 }
 
 #radio4 + .wrapper-radio-caption > .caption {
-    transform: translateY(3.9em);
+    transform: translateY(5.2em);
 }
 
 .radio-input:checked + .wrapper-radio-caption > label > span {
