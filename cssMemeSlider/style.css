@@ -69,28 +69,32 @@ body {
     transform: translateY(2em);
 }
 
-#radio2 + .wrapper-radio-caption > .radio {
+[id="radio1"] + .wrapper-radio-caption > .caption {
+    transform:  translateX(1em);
+}
+
+[id="radio2"] + .wrapper-radio-caption > .radio {
     transform: translate(2.8em, 2.6em);
 }
 
-#radio2 + .wrapper-radio-caption > .caption {
-    transform:  translateY(1.74em);
+[id="radio2"] + .wrapper-radio-caption > .caption {
+    transform:  translate(1em, 1.74em);
 }
 
-#radio3 + .wrapper-radio-caption > .radio {
+[id="radio3"] + .wrapper-radio-caption > .radio {
     transform: translate(5.6em, 5.2em);
 }
 
-#radio3 + .wrapper-radio-caption > .caption {
-    transform: translateY(3.47em);
+[id="radio3"] + .wrapper-radio-caption > .caption {
+    transform: translate(1em, 3.47em);
 }
 
-#radio4 + .wrapper-radio-caption > .radio {
+[id="radio4"] + .wrapper-radio-caption > .radio {
     transform: translate(8.4em, 7.8em);
 }
 
-#radio4 + .wrapper-radio-caption > .caption {
-    transform: translateY(5.2em);
+[id="radio4"] + .wrapper-radio-caption > .caption {
+    transform: translate(1em, 5.2em);
 }
 
 .radio-input:checked + .wrapper-radio-caption > label > span {
@@ -119,6 +123,8 @@ body {
 
 .radio-input:checked + .wrapper-radio-caption > label + .caption {
     display: block;
+    opacity: 1;
+    animation: animation 1s;
 }
 
 #radio1:checked + .wrapper-radio-caption + #radio2 + .wrapper-radio-caption + #radio3 + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(1),
@@ -126,4 +132,10 @@ body {
 #radio3:checked + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(3),
 #radio4:checked + .wrapper-radio-caption + .image-container > .image:nth-child(4) {
     display: block;
+    animation: animation 1s;
+}
+
+@keyframes animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
