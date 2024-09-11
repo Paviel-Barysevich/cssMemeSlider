@@ -8,40 +8,35 @@
 </head>
 <body>
     <div class="slider-container">
-        <div class="memes-container">
-            <div class="meme">
-                <img src="images/1.jpg" alt="1.jpg" class="image">
-            </div>
-            <div class="meme">
-                <img src="images/2.png" alt="2.png" class="image">
-            </div>
-            <div class="meme">
-                <img src="images/3.png" alt="3.png" class="image">
-            </div>
-            <div class="meme">
-                <img src="images/4.jpg" alt="4.jpg" class="image">
-            </div>
+        <input class="radio-input" type="radio" name="radio" id="radio1" checked>
+        <div class="wrapper-radio-caption">
+            <label class="radio" for="radio1" tabindex="1"><span></span></label>
+            <span class="caption">Дальше будут мемы</span>
         </div>
-        <div class="wrapper-caption-radio">
-            <div class="caption-container">
-                <span class="caption">Дальше будут мемы</span>
-                <span class="caption">Мемов много. Затрудняюсь с выбором</span>
-                <span class="caption">Не смотрел, но осуждаю</span>
-                <span class="caption">Ну, тут можно</span>
-            </div>
-            <div class="radio-container">
-                <input class="radio-input" type="radio" name="radio" id="radio1" checked>
-                <label class="radio" for="radio1" tabindex="1"><span></span></label>
 
-                <input class="radio-input" type="radio" name="radio" id="radio2">
-                <label class="radio" for="radio2" tabindex="2"><span></span></label>
+        <input class="radio-input" type="radio" name="radio" id="radio2">
+        <div class="wrapper-radio-caption">
+            <label class="radio" for="radio2" tabindex="2"><span></span></label>
+            <span class="caption">Мемов много. Затрудняюсь с выбором</span>
+        </div>
 
-                <input class="radio-input" type="radio" name="radio" id="radio3">
-                <label class="radio" for="radio3" tabindex="3"><span></span></label>
+        <input class="radio-input" type="radio" name="radio" id="radio3">
+        <div class="wrapper-radio-caption">
+            <label class="radio" for="radio3" tabindex="3"><span></span></label>
+            <span class="caption">Не смотрел, но осуждаю</span>
+        </div>
 
-                <input class="radio-input" type="radio" name="radio" id="radio4">
-                <label class="radio" for="radio4" tabindex="4"><span></span></label>
-            </div>
+        <input class="radio-input" type="radio" name="radio" id="radio4">
+        <div class="wrapper-radio-caption">
+            <label class="radio" for="radio4" tabindex="4"><span></span></label>
+            <span class="caption">Ну, тут можно</span>
+        </div>
+
+        <div class="image-container">
+            <img src="images/1.jpg" alt="1.jpg" class="image">
+            <img src="images/2.png" alt="2.png" class="image">
+            <img src="images/3.png" alt="3.png" class="image">
+            <img src="images/4.jpg" alt="4.jpg" class="image">
         </div>
     </div>
 </body>

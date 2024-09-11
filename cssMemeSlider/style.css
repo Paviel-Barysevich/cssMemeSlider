@@ -10,10 +10,6 @@ body {
     margin: 0;
 }
 
-.memes-container {
-    margin: 2em;
-}
-
 .meme {
     text-align: center;
 }
@@ -21,22 +17,7 @@ body {
 .image {
     width: 60vw;
     height: auto;
-}
-
-.meme:nth-child(2),
-.meme:nth-child(3),
-.meme:nth-child(4),
-.caption:nth-child(2),
-.caption:nth-child(3),
-.caption:nth-child(4),
-.radio-input {
-    display: none;
-}
-
-.wrapper-caption-radio {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15vw;
+    margin: 0 auto;
 }
 
 .caption {
@@ -46,18 +27,30 @@ body {
     text-align: left;
 }
 
-.radio-container {
+.slider-container {
     display: flex;
+    flex-direction: column-reverse;
+    padding: 5vw;
+}
+
+.wrapper-radio-caption {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 10vw;
 }
 
 .radio {
     align-content: center;
+    background-color: var(--c-blue);
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 0.8em solid var(--c-dark-bg);
+    border-radius: 50%;
     margin-right: 0.1em;
     transition: var(--transition-time);
-}
-
-.radio:last-child {
-    margin-right: 0;
 }
 
 .radio > span {
@@ -73,16 +66,31 @@ body {
     transition: var(--transition-time);
 }
 
-.radio-input + label {
-    background-color: var(--c-blue);
-    display: block;
-    width: 1em;
-    height: 1em;
-    border: 0.8em solid var(--c-dark-bg);
-    border-radius: 50%;
+#radio2 + .wrapper-radio-caption > .radio {
+    transform: translate(2.8em, 2.6em);
 }
 
-.radio-input:checked + label > span {
+#radio2 + .wrapper-radio-caption > .caption {
+    transform:  translateY(1.3em);
+}
+
+#radio3 + .wrapper-radio-caption > .radio {
+    transform: translate(5.6em, 5.2em);
+}
+
+#radio3 + .wrapper-radio-caption > .caption {
+    transform: translateY(2.6em);
+}
+
+#radio4 + .wrapper-radio-caption > .radio {
+    transform: translate(8.4em, 7.8em);
+}
+
+#radio4 + .wrapper-radio-caption > .caption {
+    transform: translateY(3.9em);
+}
+
+.radio-input:checked + .wrapper-radio-caption > label > span {
     background-color: var(--c-dark-bg);
 }
 
@@ -98,4 +106,21 @@ body {
 .radio:active,
 .radio:active > span {
     background-color: var(--c-grey);
+}
+
+.image,
+.caption,
+.radio-input {
+    display: none;
+}
+
+.radio-input:checked + .wrapper-radio-caption > label + .caption {
+    display: block;
+}
+
+#radio1:checked + .wrapper-radio-caption + #radio2 + .wrapper-radio-caption + #radio3 + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(1),
+#radio2:checked + .wrapper-radio-caption + #radio3 + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(2),
+#radio3:checked + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(3),
+#radio4:checked + .wrapper-radio-caption + .image-container > .image:nth-child(4) {
+    display: block;
 }
