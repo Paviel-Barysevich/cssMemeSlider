@@ -34,10 +34,9 @@ body {
 
 .wrapper-radio-caption {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 0 20vw 0 10vw;
+    padding-right: calc(8em + 2vw);
 }
 
 .radio {
@@ -140,4 +139,30 @@ body {
 @keyframes animation {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media screen and (max-width: 750px) {
+    .slider-container {
+        padding: 0;
+    }
+
+    .wrapper-radio-caption {
+        padding-right: 0;
+    }
+
+    [id="radio1"] + .wrapper-radio-caption > .radio {
+        transform: translate(-23.3em, -3.7em);
+    }
+
+    [id="radio2"] + .wrapper-radio-caption > .radio {
+        transform: translate(-20.6em, -1.1em);
+    }
+
+    [id="radio3"] + .wrapper-radio-caption > .radio {
+        transform: translate(-17.9em, 1.5em);
+    }
+
+    [id="radio4"] + .wrapper-radio-caption > .radio {
+        transform: translate(-15.2em, 4.1em);
+    }
 }
