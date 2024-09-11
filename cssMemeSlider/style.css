@@ -11,22 +11,57 @@ body {
     text-align: center;
 }
 
-.meme img {
+.image {
     width: 60vw;
     height: auto;
 }
 
-.meme span {
+.meme:nth-child(2),
+.meme:nth-child(3),
+.meme:nth-child(4),
+.caption:nth-child(2),
+.caption:nth-child(3),
+.caption:nth-child(4),
+.radio-input {
+    display: none;
+}
+
+.wrapper-caption-radio {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15vw;
+}
+
+.caption {
     display: block;
     color: #ffffff;
     font-size: 2em;
-    padding-left: 17vw;
-    margin: 1em 0 0;
     text-align: left;
 }
 
-.meme:nth-child(2),
-.meme:nth-child(3),
-.meme:nth-child(4) {
-    display: none;
+.radio-container {
+    display: flex;
+}
+
+.radio {
+    margin-right: 0.5em;
+}
+
+.radio:last-child {
+    margin-right: 0;
+}
+
+.radio-input + label {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: 0.2em solid #808080;
+    border-radius: 50%;
+}
+
+.radio-input:checked + label {
+    background-color: #008000;
+    border-color: #094b09;
 }
