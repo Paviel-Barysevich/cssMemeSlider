@@ -1,1 +1,1 @@
-# cssMemeSlider
+# The task you may find here: [cssMemeSlider](https://github.com/rolling-scopes-school/tasks/tree/master/tasks/css-meme-slider)
