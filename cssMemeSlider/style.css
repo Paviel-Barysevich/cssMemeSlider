@@ -151,18 +151,36 @@ body {
     }
 
     [id="radio1"] + .wrapper-radio-caption > .radio {
-        transform: translate(-23.3em, -3.7em);
+        transform: translate(calc(-17em - 18vw), -3.7em);
     }
 
     [id="radio2"] + .wrapper-radio-caption > .radio {
-        transform: translate(-20.6em, -1.1em);
+        transform: translate(calc(-17em - 12vw), -1.1em);
     }
 
     [id="radio3"] + .wrapper-radio-caption > .radio {
-        transform: translate(-17.9em, 1.5em);
+        transform: translate(calc(-17em - 6vw), 1.5em);
     }
 
     [id="radio4"] + .wrapper-radio-caption > .radio {
-        transform: translate(-15.2em, 4.1em);
+        transform: translate(-17em, 4.1em);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    [id="radio1"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-12em - 24vw), -3.7em);
+    }
+
+    [id="radio2"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-12em - 16vw), -1.1em);
+    }
+
+    [id="radio3"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-12em - 8vw), 1.5em);
+    }
+
+    [id="radio4"] + .wrapper-radio-caption > .radio {
+        transform: translate(-12em, 4.1em);
     }
 }
