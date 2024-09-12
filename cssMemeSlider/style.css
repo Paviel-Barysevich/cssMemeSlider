@@ -146,6 +146,10 @@ body {
         padding: 0;
     }
 
+    .image {
+        width: 90vw;
+    }
+
     .wrapper-radio-caption {
         padding-right: 0;
     }
