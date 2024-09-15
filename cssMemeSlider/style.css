@@ -1,0 +1,190 @@
+:root {
+    --c-dark-bg: #141414;
+    --c-blue: #4f4fbb;
+    --c-white: #ffffff;
+    --c-grey: #9d9b9b;
+    --transition-time: 0.5s;
+}
+body {
+    background-color: var(--c-dark-bg);
+    margin: 0;
+}
+
+.meme {
+    text-align: center;
+}
+
+.image {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.caption {
+    display: block;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 5vw;
+}
+
+.wrapper-radio-caption {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-right: calc(8em + 2vw);
+}
+
+.radio {
+    --linear-value: 1em;
+
+    align-content: center;
+    background-color: var(--c-blue);
+    display: block;
+    width: var(--linear-value);
+    height: var(--linear-value);
+    border: 0.8em solid var(--c-dark-bg);
+    border-radius: 50%;
+    margin-right: 0.1em;
+    transition: var(--transition-time);
+}
+
+.radio > span {
+    --linear-value: 0.7em;
+
+    background-color: var(--c-blue);
+    box-sizing: border-box;
+    display: block;
+    width: var(--linear-value);
+    height: var(--linear-value);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: var(--transition-time);
+}
+
+.image-container {
+    transform: translateY(2em);
+}
+
+[id="radio1"] + .wrapper-radio-caption > .caption {
+    transform:  translateX(1em);
+}
+
+[id="radio2"] + .wrapper-radio-caption > .radio {
+    transform: translate(2.8em, 2.6em);
+}
+
+[id="radio2"] + .wrapper-radio-caption > .caption {
+    transform:  translate(1em, 1.74em);
+}
+
+[id="radio3"] + .wrapper-radio-caption > .radio {
+    transform: translate(5.6em, 5.2em);
+}
+
+[id="radio3"] + .wrapper-radio-caption > .caption {
+    transform: translate(1em, 3.47em);
+}
+
+[id="radio4"] + .wrapper-radio-caption > .radio {
+    transform: translate(8.4em, 7.8em);
+}
+
+[id="radio4"] + .wrapper-radio-caption > .caption {
+    transform: translate(1em, 5.2em);
+}
+
+.radio-input:checked + .wrapper-radio-caption > label > span {
+    background-color: var(--c-dark-bg);
+}
+
+.radio:hover {
+    background-color: var(--c-white);
+    cursor: pointer;
+}
+
+.radio:hover > span {
+    background-color: var(--c-white);
+}
+
+.radio:active,
+.radio:active > span {
+    background-color: var(--c-grey);
+}
+
+.image,
+.caption,
+.radio-input {
+    display: none;
+}
+
+.radio-input:checked + .wrapper-radio-caption > label + .caption {
+    display: block;
+    opacity: 1;
+    animation: animation 1s;
+}
+
+#radio1:checked + .wrapper-radio-caption + #radio2 + .wrapper-radio-caption + #radio3 + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(1),
+#radio2:checked + .wrapper-radio-caption + #radio3 + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(2),
+#radio3:checked + .wrapper-radio-caption + #radio4 + .wrapper-radio-caption + .image-container > .image:nth-child(3),
+#radio4:checked + .wrapper-radio-caption + .image-container > .image:nth-child(4) {
+    display: block;
+    animation: animation 1s;
+}
+
+@keyframes animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media screen and (max-width: 750px) {
+    .slider-container {
+        padding: 0;
+    }
+
+    .image {
+        width: 90vw;
+    }
+
+    .wrapper-radio-caption {
+        padding-right: 0;
+    }
+
+    [id="radio1"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-17em - 18vw), -3.7em);
+    }
+
+    [id="radio2"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-17em - 12vw), -1.1em);
+    }
+
+    [id="radio3"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-17em - 6vw), 1.5em);
+    }
+
+    [id="radio4"] + .wrapper-radio-caption > .radio {
+        transform: translate(-17em, 4.1em);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    [id="radio1"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-12em - 24vw), -3.7em);
+    }
+
+    [id="radio2"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-12em - 16vw), -1.1em);
+    }
+
+    [id="radio3"] + .wrapper-radio-caption > .radio {
+        transform: translate(calc(-12em - 8vw), 1.5em);
+    }
+
+    [id="radio4"] + .wrapper-radio-caption > .radio {
+        transform: translate(-12em, 4.1em);
+    }
+}
